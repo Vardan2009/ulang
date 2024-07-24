@@ -1,0 +1,18 @@
+~ this is a comment, each line is a seperate command
+~
+LBL MAIN           ~ label
+~
+SET X 10            ~ set X to 10
+SET Y 0             ~ set Y to 0
+MOV X Y             ~ assign variable var1 = var2
+ADD X Y             ~ add variable variable by another var1 += var2
+INC X               ~ increment variable 1
+DEC Y               ~ decrement variable 1
+OUT D X             ~ print variable with format (D)ecimal
+OUT C Y             ~ print variable with format (C)har
+~
+ENLEQ X Y           ~ (E)xecute (N)ext (L)ine if (EQ)ual          var1 == var2
+ENLNEQ X Y          ~ (E)xecute (N)ext (L)ine if (N)ot (EQ)ual    var1 != var2 
+ENLGT X Y           ~ (E)xecute (N)ext (L)ine if (G)reater (T)han var1 > var2
+ENLLT X Y           ~ (E)xecute (N)ext (L)ine if (L)ess (T)han    var1 < var2
+JMP MAIN            ~ jump to label 1

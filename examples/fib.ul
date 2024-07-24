@@ -1,0 +1,38 @@
+~ Initialize variables
+SET A 0          ~ A will store the first Fibonacci number
+SET B 1          ~ B will store the second Fibonacci number
+SET N 32         ~ N will store the seperator character
+SET C 10         ~ C will store the counter for the sequence length (first 10 numbers)
+SET I 1          ~ I will store the current index (starting from 1 for counting purposes)
+~
+~ Print the first Fibonacci number
+OUT D A
+OUT C N
+~
+~ Print the second Fibonacci number
+OUT D B
+OUT C N
+~
+~ Define the label LOOP
+LBL LOOP
+~
+~ Increment the index
+INC I
+~
+~ Calculate the next Fibonacci number
+MOV D A          ~ D = A
+MOV A B          ~ A = B
+ADD B D          ~ B = B + D
+~
+~ Print the next Fibonacci number
+OUT D B
+~ Print the seperator if the current index is less than 10
+ENLLT I C
+OUT C N
+~
+~ Continue the loop if the current index is less than 10
+ENLLT I C
+JMP LOOP
+~
+~ End of program
+~
